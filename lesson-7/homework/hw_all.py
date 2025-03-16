@@ -4,7 +4,6 @@ import json
 import requests
 import csv
 
-# Task 1: Scrape Weather Data from an HTML File
 def scrape_weather():
     with open("weather.html", "r", encoding="utf-8") as file:
         soup = BeautifulSoup(file, "html.parser")
@@ -38,7 +37,6 @@ def analyze_weather(data):
 weather_data = scrape_weather()
 analyze_weather(weather_data)
 
-# Task 2: Scrape Job Listings from Fake Jobs Website and Store in SQLite
 def scrape_jobs():
     url = "https://realpython.github.io/fake-jobs/"
     response = requests.get(url)
@@ -115,7 +113,6 @@ def export_jobs_to_csv(filename="filtered_jobs.csv", location=None, company=None
 job_data = scrape_jobs()
 store_jobs_in_db(job_data)
 
-# Task 3: Scrape Laptop Data from Demoblaze
 def scrape_laptops():
     url = "https://www.demoblaze.com/"
     response = requests.get(url)

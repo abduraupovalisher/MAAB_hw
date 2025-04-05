@@ -1,9 +1,7 @@
-# pandas_homework.py
 
 import pandas as pd
 import sqlite3
 
-# --- Part 1: Reading Files ---
 
 # 1. chinook.db - Read customers table
 conn = sqlite3.connect('chinook.db')
@@ -31,7 +29,7 @@ movies_df = pd.read_csv('movie.csv')
 print("\nRandom 10 rows from Movie DataFrame:")
 print(movies_df.sample(10))
 
-# --- Part 2: Exploring DataFrames ---
+#  Part 2: 
 
 # 1. iris.json - lowercase columns and select specific
 iris_df.columns = iris_df.columns.str.lower()
@@ -59,7 +57,7 @@ sorted_movies = long_movies.sort_values(by='director_facebook_likes', ascending=
 print("\nFiltered & Sorted Movies (duration > 120):")
 print(sorted_movies[['movie_title', 'duration', 'director_name', 'director_facebook_likes']].head())
 
-# --- Part 3: Challenges and Explorations ---
+#  Part 3: Challenges and Explorations 
 
 # iris.json - mean, median, std
 print("\nIris Statistics:")
